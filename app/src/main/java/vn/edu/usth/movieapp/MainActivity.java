@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             "Jurassic World: Dominion", "Top Gun: Maverick", "Doctor Strange in the Multiverse of Madness",
             "Father Stu", "Morbius", "The Batman", "Blacklight", "Moonfall"};
 
-    String releaseDate[] = {"16/12/2022", "15/11/2022", "11/11/2022", " 21/10/2022", "08/07/2022", "01/07/2022",
+    String releaseDate[] = {"16/12/2022", "15/11/2022", "11/11/2022", "21/10/2022", "08/07/2022", "01/07/2022",
             "24/06/2022", "10/06/2022", "27/05/2022", "06/05/2022", "15/04/2022", "01/04/2022", "04/03/2022",
             "11/02/2022", "04/02/2022"};
 
@@ -146,18 +146,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setCustomView(R.layout.action_bar_layout);
-
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setHomeAsUpIndicator(R.drawable.menu);
-            getSupportActionBar().setTitle("");
-        }
 
         listView = findViewById(R.id.listview);
 
