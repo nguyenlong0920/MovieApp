@@ -20,114 +20,135 @@ import java.util.List;
 
 public class TopMovie extends Fragment {
 
-    int imgID[] = {R.drawable.avatar, R.drawable.ripd2, R.drawable.blackpanther,R.drawable.blackadam,
-            R.drawable.thor, R.drawable.minion,R.drawable.themanfromtoronto,R.drawable.jurassicworlddominion,
-            R.drawable.topgun, R.drawable.doctorstrange, R.drawable.fatherstu, R.drawable.morbius,
-            R.drawable.thebatman,R.drawable.blacklight,R.drawable.moonfall};
+    int imgID[] = {R.drawable.godfather, R.drawable.schindlerlist, R.drawable.angrymen,R.drawable.lifeisbeautiful,
+            R.drawable.thegood, R.drawable.theshawshank,R.drawable.thepursuit,R.drawable.sevensamurai,
+            R.drawable.untouchable, R.drawable.centralstation, R.drawable.thedarknight, R.drawable.judgementday,
+            R.drawable.savingprivateryan,R.drawable.gladiator,R.drawable.backtothefuture};
 
-    String Name[] = {"Bullshit: The Way of Water", "R.I.P.D. 2: Rise of the Damned", "Black Panther: Wakanda Forever",
-            "Black Adam", "THOR: LOVE AND THUNDER", "Minions: The Rise of Gru", "The Man from Toronto",
-            "Jurassic World: Dominion", "Top Gun: Maverick", "Doctor Strange in the Multiverse of Madness",
-            "Father Stu", "Morbius", "The Batman", "Blacklight", "Moonfall"};
+    String Name[] = {"The Godfather", "Schindler's List", "12 Angry Men",
+            "Life Is Beautiful", "The Good, the Bad and the Ugly", "The Shawshank Redemption",
+            "The Pursuit of Happyness", "Seven Samurai", "Untouchable", "Central Station",
+            "The Dark Knight", "Terminator 2: Judgment Day", "Saving Private Ryan", "Gladiator", "Back to the Future"};
 
-    String releaseDate[] = {"16/12/2022", "15/11/2022", "11/11/2022", " 21/10/2022", "08/07/2022", "01/07/2022",
-            "24/06/2022", "10/06/2022", "27/05/2022", "06/05/2022", "15/04/2022", "01/04/2022", "04/03/2022",
-            "11/02/2022", "04/02/2022"};
+    String releaseDate[] = {"14/03/1972", "30/11/1993", "10/04/1957", "20/12/1997", "23/12/1966", "10/09/1994",
+            "15/12/2006", "26/04/1954", "23/09/2011", "16/01/1998", "14/07/2008", "01/07/1991", "21/07/1998",
+            "01/05/2000", "03/07/1985"};
 
-    String ratePG[] = {"PG-13", "PG-13", "PG-13", "PG-13", "PG-13", "PG", "PG-13", "PG-13", "PG-13", "PG-13", "R",
-            "PG-13", "PG-13", "PG-13", "PG-13"};
+    String ratePG[] = {"R", "R", "PG-13", "PG-13", "R", "R", "PG-13", "PG-13", "R", "PG-13", "PG-13",
+            "R", "R", "R", "PG"};
 
-    String durationTime[] = {"3h10m", "1h42m", "2h41m", "2h05m", "2h13m", "1h30m", "1h50m", "2h08m", "2h26m",
-            "2h10m", "2h04m", "1h48m", "2h55m", "1h44m", "2h10m"};
+    String durationTime[] = {"2h55m", "3h15m", "1h36m", "1h56m", "2h41m", "2h22m", "1h56m", "3h27m", "1h50m",
+            "1h50m", "2h32m", "2h16m", "2h49m", "2h34m", "1h56m"};
 
-    String storyLine[] = {"Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. " +
-            "Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri " +
-            "and the army of the Na'vi race to protect their home.",
+    String storyLine[] = {"The Godfather \"Don\" Vito Corleone is the head of the Corleone mafia family in New York. " +
+            "He is at the event of his daughter's wedding. Michael, Vito's youngest son and a decorated WW II Marine " +
+            "is also present at the wedding. Michael seems to be uninterested in being a part of the family business. " +
+            "Vito is a powerful man, and is kind to all those who give him respect but is ruthless against those who do not. " +
+            "But when a powerful and treacherous rival wants to sell drugs and needs the Don's influence for the same, " +
+            "Vito refuses to do it. What follows is a clash between Vito's fading old values and the new ways which " +
+            "may cause Michael to do the thing he was most reluctant in doing and wage a mob war against all the other " +
+            "mafia families which could tear the Corleone family apart.",
 
-            "Set in the American West of 1876, 'R.I.P.D.2: Rise of the Damed' is a spiritual (pardon " +
-                    "the pun) sequel to 2013's 'R.I.P.D.' Sheriff Roy Pulsipher isn't too thrilled " +
-                    "about finding himself dead after a shoot out with a notorious outlaw gang, but he does " +
-                    "get a second chance to return to earth after being recruited by the R.I.P.D. " +
-                    "(Rest In Peace Department.). But avenging his own murder may have to take a back seat to " +
-                    "saving the world when a gateway to hell is opened in the old mining town of Red Creek " +
-                    "threatening not only the locals... but all of humanity itself.",
+            "Oskar Schindler is a vain and greedy German businessman who becomes an unlikely humanitarian amid the " +
+            "barbaric German Nazi reign when he feels compelled to turn his factory into a refuge for Jews. Based on " +
+            "the true story of Oskar Schindler who managed to save about 1100 Jews from being gassed at the Auschwitz " +
+            "concentration camp, it is a testament to the good in all of us.",
 
-            "Queen Ramonda, Shuri, M'Baku, Okoye and the Dora Milaje fight to protect the kingdom " +
-                    "of Wakanda from intervening world powers in the wake of King T'Challa's death. " +
-                    "As the Wakandans strive to embrace their next chapter, the heroes must band together " +
-                    "with the help of War Dog Nakia and Everett Ross and forge a new path for their nation.",
+            "The defense and the prosecution have rested, and the jury is filing into the jury room to decide if a young " +
+            "man is guilty or innocent of murdering his father. What begins as an open-and-shut case of murder soon becomes " +
+            "a detective story that presents a succession of clues creating doubt, and a mini-drama of each of the " +
+            "jurors'prejudices and preconceptions about the trial, the accused, AND each other. Based on the play, all of " +
+            "the action takes place on the stage of the jury room.",
 
-            "Reawakening after 5000 years, Black Adam becomes the world's ruthless protector: " +
-                    "an anti-villain to take on the likes of Superman and Wonder Woman. Now in the 21st-Century, " +
-                    "Black Adam must face off against the Justice Society of America and its heroes: Doctor Fate, " +
-                    "Hawkman, Atom Smasher and Cyclone. The fate of the world hangs in the balance.",
+            "In 1930s Italy, a carefree Jewish waiter named Guido starts a fairy tale life by courting and marrying a lovely " +
+            "woman from a nearby city. Guido and his wife have a son and live happily together until the occupation of " +
+            "Italy by German forces. In an attempt to hold his family together and help his son survive the horrors of a Jewish " +
+            "Concentration Camp, Guido imagines that the Holocaust is a game and that the grand prize for winning is a tank.",
 
-            "Thor's retirement is interrupted by a galactic killer known as Gorr the God Butcher, " +
-                    "who seeks the extinction of the gods. To combat the threat, Thor enlists the help of King Valkyrie, " +
-                    "Korg and ex-girlfriend Jane Foster, who - to Thor's surprise - inexplicably wields his magical " +
-                    "hammer, Mjolnir, as the Mighty Thor. Together, they embark upon a harrowing cosmic adventure to " +
-                    "uncover the mystery of the God Butcher's vengeance and stop him before it's too late.",
+            "Blondie, The Good (Clint Eastwood), is a professional gunslinger who is out trying to earn a few dollars. " +
+            "Angel Eyes, The Bad (Lee Van Cleef), is a hitman who always commits to a task and sees it through - as long " +
+            "as he's paid to do so. And Tuco, The Ugly (Eli Wallach), is a wanted outlaw trying to take care of his own hide. " +
+            "Tuco and Blondie share a partnership making money off of Tuco's bounty, but when Blondie unties the partnership, " +
+            "Tuco tries to hunt down Blondie. When Blondie and Tuco come across a horse carriage loaded with dead bodies, " +
+            "they soon learn from the only survivor, Bill Carson (Antonio Casale), that he and a few other men have buried a stash " +
+            "of gold in a cemetery. Unfortunately, Carson dies and Tuco only finds out the name of the cemetery, while Blondie finds out " +
+            "the name on the grave. Now the two must keep each other alive in order to find the gold. Angel Eyes (who had been looking " +
+            "for Bill Carson) discovers that Tuco and Blondie met with Carson and knows they know where the gold is; now he needs " +
+            "them to lead him to it. Now The Good, the Bad, and the Ugly must all battle it out to get their hands on $200,000.00 worth of gold.",
 
-            "In the heart of the 1970s, amidst a flurry of feathered hair and flared jeans, Gru (Steve Carell) " +
-                    "is growing up in the suburbs. A fanboy of a supervillain supergroup known as the Vicious 6, Gru " +
-                    "hatches a plan to become evil enough to join them. Luckily, he gets some mayhem-making back-up from " +
-                    "his loyal followers, the Minions. Together, Kevin, Stuart, Bob, and Otto - a new Minion sporting " +
-                    "braces and a desperate need to please - deploy their skills as they and Gru build their first lair, " +
-                    "experiment with their first weapons, and pull off their first missions. When the Vicious 6 oust their " +
-                    "leader, legendary fighter Wild Knuckles (Alan Arkin), Gru interviews to become their newest member. " +
-                    "It doesn't go well (to say the least), and only gets worse after Gru outsmarts them and suddenly " +
-                    "finds himself the mortal enemy of the apex of evil. On the run, Gru will turn to an unlikely source " +
-                    "for guidance, Wild Knuckles, and discover that even bad guys need a little help from their friends.",
+            "Chronicles the experiences of a formerly successful banker as a prisoner in the gloomy jailhouse of " +
+            "Shawshank after being found guilty of a crime he did not commit. The film portrays the man's unique " +
+            "way of dealing with his new, torturous life; along the way he befriends a number of fellow prisoners, " +
+            "most notably a wise long-term inmate named Red.",
 
-            "The world's deadliest assassin and New York's biggest screw-up are mistaken for " +
-                    "each other at an Airbnb rental.",
+            "Based on a true story about a man named Christopher Gardner. Gardner has invested heavily in a " +
+            "device known as a \"bone density scanner\". He feels like he has it made selling these devices. " +
+            "However, they do not sell well as they are marginally better than x-ray at a much higher price. " +
+            "As Gardner works to make ends meet, his wife leaves him and he loses his apartment. Forced to " +
+            "live out in the streets with his son, Gardner continues to sell bone density scanners while " +
+            "concurrently taking on an unpaid internship as a stockbroker, with slim chances for advancement " +
+            "to a paid position. Before he can receive pay, he needs to outshine the competition through " +
+            "6 months of training, and to sell his devices to stay afloat.",
 
-            "After surviving the destruction of Isla Nubla, Owen Grady and Claire Dearing took in young Maisie Lockwood. " +
-                    "They've been living under the radar to protect Maisie, but she feels like a prisoner. When Maisie " +
-                    "goes missing, Owen and Claire set out to find her, and eventually confront Lewis Dodgson, owner of " +
-                    "Biosyn. Paleobotanist Ellie Sattler, Paleontologist Alan Grant, and Chaotician Ian Malcolm set out to " +
-                    "expose Dodgson's schemes.",
+            "A veteran samurai, who has fallen on hard times, answers a village's request for protection " +
+            "from bandits. He gathers 6 other samurai to help him, and they teach the townspeople how to " +
+            "defend themselves, and they supply the samurai with three small meals a day. The film culminates " +
+            "in a giant battle when 40 bandits attack the village.",
 
-            "Set 30 years after its predecessor, it follows Maverick's return to the United States Navy Strike Fighter " +
-                    "Tactics Instructor program (also known as U.S. Navy-Fighter Weapons School - \"TOPGUN\"), where " +
-                    "he must confront his past as he trains a group of younger pilots, among them the son of Maverick's " +
-                    "deceased best friend Lieutenant Nick \"Goose\" Bradshaw, USN.",
+            "In Paris, the aristocratic and intellectual Philippe is a quadriplegic millionaire who is " +
+            "interviewing candidates for the position of his carer, with his red-haired secretary Magalie. " +
+            "Out of the blue, Driss cuts the line of candidates and brings a document from the Social " +
+            "Security and asks Phillipe to sign it to prove that he is seeking a job position so he can " +
+            "receive his unemployment benefit. Philippe challenges Driss, offering him a trial period of " +
+            "one month to gain experience helping him. Then Driss can decide whether he would like to " +
+            "stay with him or not. Driss accepts the challenge and moves to the mansion, changing the " +
+            "boring life of Phillipe and his employees.",
 
-            "Following the events of Spider-Man No Way Home, Doctor Strange unwittingly casts a forbidden spell that " +
-                    "accidentally opens up the multiverse. With help from Wong and Scarlet Witch, Strange confronts various " +
-                    "versions of himself as well as teaming up with the young America Chavez while traveling through various " +
-                    "realities and working to restore reality as he knows it. Along the way, Strange and his allies realize " +
-                    "they must take on a powerful new adversary who seeks to take over the multiverse.",
+            "Dora, a dour old woman who hates customers and calls them 'trash', works at a Rio de " +
+            "Janeiro central station writing and mailing letters for customers. Josue is a 9-year-old " +
+            "boy who never met his father. His mother is sending letters to his father through Dora. " +
+            "When she dies in a car accident, Dora takes Josue on a trip to find his father.",
 
-            "Follows the life of Father Stuart Long, a boxer-turned-priest who inspired countless people during " +
-                    "his journey from self-destruction to redemption.",
-            "Dangerously ill with a rare blood disorder, and determined to save others suffering his same fate, " +
-                    "Dr. Morbius attempts a desperate gamble. What at first appears to be a radical success soon reveals " +
-                    "itself to be a remedy potentially worse than the disease.",
-            "Batman ventures into Gotham City's underworld when a sadistic killer leaves behind a trail of cryptic " +
-                    "clues. As the evidence begins to lead closer to home and the scale of the perpetrator's plans " +
-                    "become clear, he must forge new relationships, unmask the culprit and bring justice to the abuse of " +
-                    "power and corruption that has long plagued the metropolis.",
+            "Set within a year after the events of Batman Begins (2005), Batman, Lieutenant James Gordon, " +
+            "and new District Attorney Harvey Dent successfully begin to round up the criminals that plague " +
+            "Gotham City, until a mysterious and sadistic criminal mastermind known only as \"The Joker\" " +
+            "appears in Gotham, creating a new wave of chaos. Batman's struggle against The Joker becomes " +
+            "deeply personal, forcing him to \"confront everything he believes\" and improve his technology " +
+            "to stop him. A love triangle develops between Bruce Wayne, Dent, and Rachel Dawes.",
 
-            "Political activist Sofia is killed in an apparent hit-and-run accident outside of her home. Vietnam War " +
-                    "veteran Travis Block works as a fixer for the Director of the FBI, Gabriel Robinson.Travis wants to " +
-                    "retire and spend more time with his daughter and granddaughter. Mira, a journalist, claims to have " +
-                    "information about Sofia's death and proof that it was not an accident. She got the intel from Dusty. " +
-                    "Dusty also claims to have information about a top secret FBI operation called Project Unity, which " +
-                    "kills innocent civilians like Sofia. Gabriel tells Travis that his last assignment is to bring in " +
-                    "Dusty Crane. Travis has no choice now but to confront his FBI boss Gabriel with this information. " +
-                    "Who is speaking the truth?",
+            "Over 10 years have passed since the first machine called The Terminator tried to kill Sarah " +
+            "Connor and her unborn son, John. The man who will become the future leader of the human " +
+            "resistance against the Machines is now a healthy young boy. However, another Terminator, " +
+            "called the T-1000, is sent back through time by the supercomputer Skynet. This new Terminator " +
+            "is more advanced and more powerful than its predecessor and its mission is to kill John Connor " +
+            "when he's still a child. However, Sarah and John do not have to face the threat of the " +
+            "T-1000 alone. Another Terminator (identical to the same model that tried and failed to kill " +
+            "Sarah Connor in 1984) is also sent back through time to protect them. Now, the battle for tomorrow has begun.",
 
-            "In Moonfall, a mysterious force knocks the Moon from its orbit around Earth and sends it hurtling on " +
-                    "a collision course with life as we know it. With mere weeks before impact and the world on the brink " +
-                    "of annihilation, NASA executive and former astronaut Jo Fowler is convinced she has the key to saving " +
-                    "us all - but only one astronaut from her past, Brian Harper and a conspiracy theorist K.C. Houseman " +
-                    "believe her. These unlikely heroes will mount an impossible last-ditch mission into space, leaving " +
-                    "behind everyone they love, only to find that they just might have prepared for the wrong mission."};
+            "Opening with the Allied invasion of Normandy on 6 June 1944, members of the 2nd Ranger " +
+            "Battalion under Cpt. Miller fight ashore to secure a beachhead. Amidst the fighting, " +
+            "two brothers are killed in action. Earlier in New Guinea, a third brother is KIA. " +
+            "Their mother, Mrs. Ryan, is to receive all three of the grave telegrams on the same day. " +
+            "The United States Army Chief of Staff, George C. Marshall, is given an opportunity to " +
+            "alleviate some of her grief when he learns of a fourth brother, Private James Ryan, and " +
+            "decides to send out 8 men (Cpt. Miller and select members from 2nd Rangers) to find him " +
+            "and bring him back home to his mother...",
 
-    String director[] ={"James Cameron", "Paul Leyden", "Ryan Coogler", "Jaume Collet-Serra", "Taika Waititi",
-            "Kyle Balda", "Patrick Hughes", "Colin Trevorrow", "Joseph Kosinski", "Sam Raimi", "Sam Raimi",
-            "Daniel Espinosa", "Matt Reeves", "Mark Williams", "Roland Emmerich"};
+            "Maximus is a powerful Roman general, loved by the people and the aging Emperor, " +
+            "Marcus Aurelius. Before his death, the Emperor chooses Maximus to be his heir over his own son, " +
+            "Commodus, and a power struggle leaves Maximus and his family condemned to death. The powerful " +
+            "general is unable to save his family, and his loss of will allows him to get captured and put " +
+            "into the Gladiator games until he dies. The only desire that fuels him now is the chance to rise " +
+            "to the top so that he will be able to look into the eyes of the man who will feel his revenge.",
+
+            "Marty McFly, a typical American teenager of the Eighties, is accidentally sent back to " +
+            "1955 in a plutonium-powered DeLorean \"time machine\" invented by a slightly mad scientist. " +
+            "During his often hysterical, always amazing trip back in time, Marty must make certain " +
+            "his teenage parents-to-be meet and fall in love - so he can get back to the future."};
+
+    String director[] ={"Francis Ford Coppola", "Steven Spielberg", "Sidney Lumet", "Roberto Benigni", "Sergio Leone",
+            "Frank Darabont", "Gabriele Muccino", "Akira Kurosawa", "Olivier Nakache", "Walter Salles", "Christopher Nolan",
+            "James Cameron", "Steven Spielberg", "Ridley Scott", "Robert Zemeckis"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
