@@ -213,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent2);
                 return true;
             case  R.id.logout:
-                Intent intent3 = new Intent(this, SignupActivity.class);
+                Intent intent3 = new Intent(this, LoginActivity.class);
                 startActivity(intent3);
                 return true;
             default:
